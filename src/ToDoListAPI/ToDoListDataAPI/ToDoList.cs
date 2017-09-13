@@ -120,6 +120,7 @@ namespace ToDoListAPI
             string responseContent = await httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
             if (statusCode != HttpStatusCode.NoContent)
             {
+                /*
                 HttpOperationException<object> ex = new HttpOperationException<object>();
                 ex.Request = httpRequest;
                 ex.Response = httpResponse;
@@ -129,6 +130,7 @@ namespace ToDoListAPI
                     ServiceClientTracing.Error(invocationId, ex);
                 }
                 throw ex;
+                */
             }
             
             // Create Result
@@ -227,6 +229,7 @@ namespace ToDoListAPI
             string responseContent = await httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
             if (statusCode != HttpStatusCode.OK)
             {
+                /*
                 HttpOperationException<object> ex = new HttpOperationException<object>();
                 ex.Request = httpRequest;
                 ex.Response = httpResponse;
@@ -236,6 +239,7 @@ namespace ToDoListAPI
                     ServiceClientTracing.Error(invocationId, ex);
                 }
                 throw ex;
+                */
             }
             
             // Create Result
@@ -341,6 +345,7 @@ namespace ToDoListAPI
             string responseContent = await httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
             if (statusCode != HttpStatusCode.OK)
             {
+                /*
                 HttpOperationException<object> ex = new HttpOperationException<object>();
                 ex.Request = httpRequest;
                 ex.Response = httpResponse;
@@ -350,6 +355,7 @@ namespace ToDoListAPI
                     ServiceClientTracing.Error(invocationId, ex);
                 }
                 throw ex;
+                */
             }
             
             // Create Result
@@ -458,6 +464,7 @@ namespace ToDoListAPI
             string responseContent = await httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
             if (statusCode != HttpStatusCode.NoContent)
             {
+                /*
                 HttpOperationException<object> ex = new HttpOperationException<object>();
                 ex.Request = httpRequest;
                 ex.Response = httpResponse;
@@ -467,6 +474,7 @@ namespace ToDoListAPI
                     ServiceClientTracing.Error(invocationId, ex);
                 }
                 throw ex;
+                */
             }
             
             // Create Result
@@ -563,6 +571,7 @@ namespace ToDoListAPI
             string responseContent = await httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
             if (statusCode != HttpStatusCode.NoContent)
             {
+                /*
                 HttpOperationException<object> ex = new HttpOperationException<object>();
                 ex.Request = httpRequest;
                 ex.Response = httpResponse;
@@ -572,6 +581,7 @@ namespace ToDoListAPI
                     ServiceClientTracing.Error(invocationId, ex);
                 }
                 throw ex;
+                */
             }
             
             // Create Result

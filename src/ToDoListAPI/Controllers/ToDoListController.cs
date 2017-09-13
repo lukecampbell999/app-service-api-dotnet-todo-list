@@ -23,8 +23,9 @@ namespace ToDoListAPI.Filters
         {
             if (context.Exception is Microsoft.Rest.HttpOperationException)
             {
-                var ex = (Microsoft.Rest.HttpOperationException)context.Exception;
-                context.Response = ex.Response;
+                //var ex = (Microsoft.Rest.HttpOperationException)context.Exception;
+                var ex = (Microsoft.Rest.HttpOperationException) context.Exception;
+                //context.Response = ex.Response.;
             }
         }
     }
@@ -78,6 +79,24 @@ namespace ToDoListAPI.Controllers
                 };
             }
         }
+
+        // GET: api/ToDoItemList/6
+        public async Task<ToDoItem> AmendOwnerID(int id, string ownerString)
+        {
+            //owner = ((ClaimsIdentity)User.Identity).FindFirst(ClaimTypes.NameIdentifier).Value;
+            using (var client = NewDataAPIClient())
+            {
+                var result = await client.ToDoList.GetByIdByOwnerAndIdAsync(owner, id);
+                return new ToDoItem
+                {
+                    Description = result.Description,
+                    ID = (int)result.ID,
+                    Owner = result.Owner
+                };
+            }
+        }
+
+        
 
         // POST: api/ToDoItemList
         public async Task Post(ToDoItem todo)
